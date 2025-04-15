@@ -11,4 +11,51 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    
+}
+
+#forms{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 30%;
+
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 10px;
+
+    background-color: gray;
+}
+
+#forms button{
+    width: 150px;
+    height: 25px;
+    background-color: azure;
+    border: 2px black solid;
+    transition: 0.3s;
+}
+
+#forms button:hover{
+    background-color: rgb(176, 251, 251);
+    cursor: pointer;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+input{
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+
+input:focus{
+    width: 120%;
+    height: 110%;
 }

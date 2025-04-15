@@ -12,17 +12,21 @@
 
     <form id="forms" action="/enviar" method="post">
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
+        <div class="box" id="boxEmail">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
 
-
+        <div class="box" id="boxSenha">
         <label for="senha">Senha:</label>
         <input type="password" name="senha" id="senha" required>
+        </div>
 
-        <button type="submit"></button>
+        <button type="submit">enviar</button>
 
     </form>
     
+    <script src="emit.js"></script>
 
 </body>
 </html>
