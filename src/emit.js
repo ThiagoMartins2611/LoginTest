@@ -5,14 +5,14 @@ formulario.addEventListener("submit", async (e)=>{
     e.preventDefault()
 
    
-    const email = document.getElementById("email").value;
+    const user = document.getElementById("user").value;
     const senha = document.getElementById("senha").value;
   
-    const dados = { email, senha };
+    const dados = { user, senha };
     
     try{
 
-        await fetch('/enviar', {
+       const response = await fetch('/enviar', {
 
             method: "POST",
             headers: {
@@ -21,6 +21,14 @@ formulario.addEventListener("submit", async (e)=>{
             body: JSON.stringify(dados)
 
         });
+
+        const data = await response.json()
+
+        console.log(data)
+
+        if(data.sucess){
+            window.location.href = '/obrigado';
+        }
 
 
     }catch(erro){

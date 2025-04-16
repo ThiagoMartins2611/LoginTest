@@ -12,14 +12,16 @@
 
     <form id="forms" action="/enviar" method="post">
 
-        <div class="box" id="boxEmail">
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
+        <h2>Login</h2>
+
+        <div class="box" id="boxUser">
+            <input class="input" type="name" name="user" id="user" required>
+            <label class="label" id="labelUser" for="user">User</label>
         </div>
 
         <div class="box" id="boxSenha">
-        <label for="senha">Senha:</label>
-        <input type="password" name="senha" id="senha" required>
+        <input class="input" type="password" name="senha" id="senha" required>
+        <label class="label" for="senha" id="labelSenha">Senha</label>
         </div>
 
         <button type="submit">enviar</button>

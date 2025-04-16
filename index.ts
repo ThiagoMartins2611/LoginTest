@@ -23,7 +23,7 @@ app.get('/', (req:express.Request, res:express.Response)=>{
 app.post('/enviar', (req:express.Request, res:express.Response )=>{
     console.log(req.body)
 
-    res.redirect('/obrigado');
+    res.json({sucess: true});
 })
 
 app.get('/obrigado', (req:express.Request, res:express.Response)=>{

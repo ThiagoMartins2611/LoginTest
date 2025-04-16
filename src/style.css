@@ -2,6 +2,10 @@
     border: 0;
     padding: 0;
     margin: 0;
+
+    box-sizing: border-box;
+
+    color: white;
 }
 html, body{
     width: 100%;
@@ -11,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #121212;
     
 }
 
@@ -26,36 +30,61 @@ body{
 
     border-radius: 10px;
 
-    background-color: gray;
+    background-color: #1F1F1F;
 }
 
 #forms button{
     width: 150px;
     height: 25px;
-    background-color: azure;
+    background-color: #7B2CBF;
     border: 2px black solid;
+    border-radius: 10px;
+    color: black;
     transition: 0.3s;
 }
 
 #forms button:hover{
-    background-color: rgb(176, 251, 251);
+    background-color: #03DAC6;
     cursor: pointer;
 }
 
 .box{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
    
 }
 input{
-    border: 2px black solid;
-    border-radius: 10px;
+    background-color: transparent;
+    border-bottom: 1px white solid;
+
+    outline: none;
+}
+
+label{
+    color: white;
+    font-size:smaller;
+
+    transform: translateY(-20px);
+    transition: 0.3s;
 }
 
 
-input:focus{
-    width: 120%;
-    height: 110%;
+#forms .input:valid ~ .label, #forms .input:focus ~ .label {
+    transform: translateY(-35px);
 }
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+input[type="password"] {
+    appearance: none;
+    -webkit-text-security: disc;
+  }
