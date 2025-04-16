@@ -40,12 +40,19 @@ body{
     border: 2px black solid;
     border-radius: 10px;
     color: black;
+    box-shadow: 2px 2px 5px black;
     transition: 0.3s;
 }
 
 #forms button:hover{
     background-color: #03DAC6;
+    box-shadow: 0 0 0 black;
+
     cursor: pointer;
+}
+
+#forms button:active{
+    transform: translateX(2px) translateY(2px);
 }
 
 .box{
