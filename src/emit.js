@@ -1,8 +1,8 @@
 const formulario = document.getElementById("forms");
 
-formulario.addEventListener("submit", async (e)=>{
+formulario.addEventListener("submit", async (err)=>{
     
-    e.preventDefault()
+    err.preventDefault()
 
    
     const user = document.getElementById("user").value;
